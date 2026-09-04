@@ -1,1 +1,13 @@
 ResumeLaTeX/ResumeSkills/
+
+# LaTeX build output
+build/
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+
+.DS_Store
