@@ -1,4 +1,4 @@
-\documentclass[10pt, letterpaper]{article}
+\documentclass[11pt, letterpaper]{article}
 
 % Packages:
 \usepackage[
@@ -35,7 +35,6 @@
 \usepackage{paracol} % for two and three column entries
 \usepackage{ifthen} % for conditional statements
 \usepackage{needspace} % for avoiding page brake right after the section title
-\usepackage{mathpazo} % check if engine is pdflatex, xetex or luatex
 
 % Ensure that generated PDF is machine readable/ATS parsable:
 \ifPDFTeX
@@ -43,10 +42,11 @@
     \pdfgentounicode=1
     \usepackage[T1]{fontenc}
     \usepackage[utf8]{inputenc}
+    \usepackage{newtxtext} % Times clone for pdfLaTeX
+\else
+    \usepackage{fontspec}
+    \setmainfont{Times New Roman}
 \fi
-
-% Main text font: Times-like (professional, conservative)
-\usepackage{newtxtext}
 
 
 
@@ -236,7 +236,7 @@
         \begin{highlights}
             \item Built and deployed a LangGraph-based multi-agent recommendation system that integrated product and campaign data across 4,000+ SKUs and delivered campaign-specific insights to four marketing teams.
             \item Unified data flow across 30+ APIs into a single training, inference, and reranking pipeline, eliminating redundant processing between stages and cutting end-to-end processing time by 80\%.
-            \item Engineered a scalable Amazon Bedrock batch inference pipeline, prioritizing batch processing over real-time inference to maximize throughput and cost efficiency, with Amazon S3 providing durable input/output storage and failure recovery.
+            \item Engineered a scalable Amazon Bedrock batch inference pipeline, prioritizing batch over real-time inference to maximize throughput and cost efficiency, with Amazon S3 for durable input/output storage and failure recovery.
         \end{highlights}
     \end{onecolentry}
 
@@ -252,9 +252,9 @@
     \vspace{\titlesep}
     \begin{onecolentry}
         \begin{highlights}
-            \item Designed a multi-stage computer vision pipeline using Python, OpenCV, YOLOv8, VGG16, and SuperGlue, generating 58,000+ comparison pairs from 536 seal images, and delivered the recognition system with a 5-person team and Kaohsiung City Police.
+            \item Designed a multi-stage computer vision pipeline in Python, OpenCV, YOLOv8, VGG16, and SuperGlue, generating 58,000+ comparison pairs from 536 seal images with a 5-person team and Kaohsiung City Police.
             \item Deployed the system for forensic document verification, reaching 97\% accuracy on government seals and 92\% on corporate seals, and earning the High Distinction Award (1st Place) at AIGO Contest 2024.
-            \item Co-authored a peer-reviewed paper (\href{https://doi.org/10.3390/engproc2026128034}{doi.org/10.3390/engproc2026128034}) based on research that won the IEEE ICEIB 2025 Best Paper Award.
+            \item Co-authored a paper that won the IEEE ICEIB 2025 Best Paper Award (\href{https://doi.org/10.3390/engproc2026128034}{doi.org/10.3390/engproc2026128034}).
         \end{highlights}
     \end{onecolentry}
 
@@ -265,9 +265,9 @@
 
         \vspace{\titlesep}
         \begin{highlights}
-            \item Architected and launched a full-stack journey-planning application with TypeScript, Next.js, Node.js, Fastify, and REST APIs to recommend European meeting locations for groups of 2--6 travelers.
-            \item Engineered four ranking algorithms using PostgreSQL, PostGIS, and Transitous to compare locations by travel time, fairness, transfers, and arrival-time spread.
-            \item Designed an asynchronous pipeline with Redis, BullMQ, Docker, transactional outbox, and idempotent workers, and visualized transit routes and stations using MapLibre.
+            \item Built a full-stack journey planner in TypeScript, Next.js, Node.js, and Fastify for European group meeting locations.
+            \item Developed four ranking algorithms in PostgreSQL and PostGIS for time, fairness, transfers, and arrival spread.
+            \item Designed a Redis, BullMQ, and Docker pipeline with a transactional outbox and mapped transit routes in MapLibre.
         \end{highlights}
     \end{onecolentry}
 
@@ -278,8 +278,8 @@
 
         \vspace{\titlesep}
         \begin{highlights}
-            \item Built modular Dart/Flutter features with SOLID design patterns and CI/CD workflows to support a consistent release process.
-            \item Launched a campus mobile app and social media platform as a Founding Engineer, converting student needs into product requirements and scaling to more than 3,000 NCCU students.
+            \item Developed Flutter UI and front-end business logic as a founding engineer for a campus mobile app used by more than 3,000 students at National Chengchi University.
+            \item Applied SOLID principles and design patterns in Flutter and contributed to CI/CD for app releases.
         \end{highlights}
     \end{onecolentry}
 
